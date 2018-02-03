@@ -1,9 +1,27 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const {
+  HotModuleReplacementPlugin,
+  NamedModulesPlugin,
+  NoEmitOnErrorsPlugin,
+} = require('webpack');
 
 module.exports = {
   entry: [
+    // Defines webpack's entry points for compiling the app.
+    // activate HMR for React
+    'react-hot-loader/patch',
+
+    // bundle the client for webpack-dev-server
+    // and connect to the provided endpoint
+    'webpack-dev-server/client?http://localhost:8080',
+
+    // bundle the client for hot reloading
+    // only- means to only hot reload for successful updates
+    'webpack/hot/only-dev-server',
+
+    // the entry point of our app
     './src/index.tsx',
   ],
 
@@ -32,7 +50,7 @@ module.exports = {
         // Compile TS files
         test: /\.tsx?$/,
         include: /src/,
-        use: ['awesome-typescript-loader'],
+        use: ['react-hot-loader/webpack', 'awesome-typescript-loader'],
       },
       {
         // The "file" loader handles *all* assets unless explicitly excluded.
@@ -131,5 +149,26 @@ module.exports = {
       syntax: 'scss',
       failOnError: false,
     }),
+
+    // Enable HMR globally
+    new HotModuleReplacementPlugin(),
+
+    // prints more readable module names in the browser console on HMR updates
+    new NamedModulesPlugin(),
+
+    // do not emit compiled assets that include errors
+    new NoEmitOnErrorsPlugin(),
   ],
+
+  // Configures the webpack-dev-server
+  devServer: {
+    host: 'localhost',
+    port: 8080,
+
+    historyApiFallback: true,
+    contentBase: './',
+
+    // Enable HMR
+    hot: true,
+  },
 };
