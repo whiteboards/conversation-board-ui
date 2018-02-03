@@ -1,4 +1,8 @@
 # conversation-board-ui
+
+[![master](https://travis-ci.org/whiteboards/conversation-board-ui.svg?branch=master)](https://travis-ci.org/whiteboards/conversation-board-ui)
+[![develop](https://travis-ci.org/whiteboards/conversation-board-ui.svg?branch=develop)](https://travis-ci.org/whiteboards/conversation-board-ui)
+
 Front end UI for Conversation Board
 
 ## Getting Started
