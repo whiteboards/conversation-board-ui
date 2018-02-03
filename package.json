@@ -29,7 +29,7 @@
     "lint": "npm run stylelint && npm run tslint",
     "tslint": "tslint src/**/*.ts && tslint src/**/*.tsx",
     "stylelint": "stylelint src/**/*.scss",
-    "travis": "npm run stylelint && npm run tslint && npm run test && jest"
+    "travis": "npm run stylelint && npm run tslint && jest"
   },
   "jest": {
     "transform": {
