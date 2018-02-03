@@ -9,17 +9,17 @@ const {
 
 module.exports = {
   entry: [
-    // Defines webpack's entry points for compiling the app.
-    // activate HMR for React
-    'react-hot-loader/patch',
+    // // Defines webpack's entry points for compiling the app.
+    // // activate HMR for React
+    // 'react-hot-loader/patch',
 
-    // bundle the client for webpack-dev-server
-    // and connect to the provided endpoint
-    'webpack-dev-server/client?http://localhost:8080',
+    // // bundle the client for webpack-dev-server
+    // // and connect to the provided endpoint
+    // 'webpack-dev-server/client?http://localhost:8080',
 
-    // bundle the client for hot reloading
-    // only- means to only hot reload for successful updates
-    'webpack/hot/only-dev-server',
+    // // bundle the client for hot reloading
+    // // only- means to only hot reload for successful updates
+    // 'webpack/hot/only-dev-server',
 
     // the entry point of our app
     './src/index.tsx',
@@ -115,7 +115,7 @@ module.exports = {
       {
         // Collect and compile CSS files
         test: /\.css$/,
-        include: /src/,
+        include: [/src/, /node_modules/],
         use: [{
             loader: 'style-loader',
             options: {
@@ -151,7 +151,7 @@ module.exports = {
     }),
 
     // Enable HMR globally
-    new HotModuleReplacementPlugin(),
+    // new HotModuleReplacementPlugin(),
 
     // prints more readable module names in the browser console on HMR updates
     new NamedModulesPlugin(),
@@ -168,7 +168,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: './',
 
-    // Enable HMR
-    hot: true,
+    // TODO: Enable HMR
+    // hot: true,
   },
 };

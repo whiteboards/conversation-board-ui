@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Button, Container, Header, Segment } from 'semantic-ui-react';
+
 // interface IAppProps {
 //   // No props.
 //   // We need this as a placeholder for the component.
@@ -32,11 +34,13 @@ class App extends React.Component<any, IAppState> {
 
   render() {
     return (
-      <div>
-        <h1>Conversation Board UI</h1>
-        <p>Counter: {this.state.counter}</p>
-        <button onClick={this.increment}>+</button>
-      </div>
+      <Container>
+        <Header size='huge'>Conversation Board UI</Header>
+        <Segment>
+          <p>Counter: {this.state.counter}</p>
+          <Button primary onClick={this.increment}>Add</Button>
+        </Segment>
+      </Container>
     );
   }
 }

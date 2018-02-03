@@ -5,28 +5,32 @@ import { AppContainer } from 'react-hot-loader';
 
 import App from './App';
 
+import 'semantic-ui-css/semantic.min.css';
 import './scss/index.scss';
 
-// TODO: Implement hot module replacement
+// TODO: Fix HMR
 
-const rootEl = document.getElementById('ConversationBoard');
+// const render = (Component) => {
+//   console.log('[index] render');
+//   ReactDOM.render(
+//     <AppContainer>
+//       <Component />
+//     </AppContainer>,
+//     document.getElementById('ConversationBoard'),
+//   );
+// };
+
+// render(App);
+
+// // Webpack Hot Module Replacement API
+// if ((module as any).hot) {
+//   (module as any).hot.accept('./App', () => {
+//     console.log('[index] hot render');
+//     render(App);
+//   });
+// }
+
 ReactDOM.render(
-  <AppContainer>
-    <App />
-  </AppContainer>,
-  rootEl,
+  <App />,
+  document.getElementById('ConversationBoard'),
 );
-
-// Hot Module Replacement API
-if ((module as any).hot) {
-  (module as any).hot.accept('./App', () => {
-    const NextApp = require('./App').default;
-    ReactDOM.render(
-      <AppContainer>
-        <NextApp />
-      </AppContainer>
-      ,
-      rootEl,
-    );
-  });
-}
