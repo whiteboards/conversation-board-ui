@@ -15,7 +15,8 @@
       },
       "no-console": false,
       "no-var-requires": false,
-      "member-access": false
+      "member-access": false,
+      "ordered-imports": false
   },
   "jsRules": {
       "quotemark": {

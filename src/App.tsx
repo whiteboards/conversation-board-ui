@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-import { Button, Container, Header, Segment } from 'semantic-ui-react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Login from './Login';
+import Routes from './Routes';
 
 // interface IAppProps {
 //   // No props.
@@ -8,39 +11,28 @@ import { Button, Container, Header, Segment } from 'semantic-ui-react';
 //   // (We could pass props to here from where we call ReactDOM.render in index.tsx)
 // }
 
-interface IAppState {
-  counter: number;
-}
+// interface IAppState {
+// }
 
-class App extends React.Component<any, IAppState> {
+class App extends React.Component<any, any> {
   constructor(props) {
     super(props);
 
-    this.state = {
-      counter: 0,
-    };
-  }
-
-  increment = () => {
-    try {
-      this.setState((prevState, props) => ({
-        ...prevState,
-        counter: prevState.counter + 1,
-      }));
-    } catch (err) {
-      console.error('[App] failed to increment counter', err);
-    }
+    this.state = {};
   }
 
   render() {
     return (
-      <Container>
-        <Header size='huge'>Conversation Board UI</Header>
-        <Segment>
-          <p>Counter: <span className='test-target'>{this.state.counter}</span></p>
-          <Button primary onClick={this.increment}>Add</Button>
-        </Segment>
-      </Container>
+      <Router>
+        <Switch>
+          <Route exact path='/login'>
+            <Login />
+          </Route>
+          <Route path='/'>
+            <Routes />
+          </Route>
+        </Switch>
+      </Router>
     );
   }
 }
