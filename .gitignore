@@ -59,5 +59,3 @@ typings/
 
 # Build output
 dist/
-
-yarn.lock
