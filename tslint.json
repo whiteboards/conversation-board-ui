@@ -1,0 +1,30 @@
+{
+  "defaultSeverity": "warn",
+  "rulesDirectory": [
+      "node_modules/tslint-microsoft-contrib"
+  ],
+  "extends": [
+      "tslint:recommended"
+  ],
+  "rules": {
+      "quotemark": {
+          "options": [
+              "single",
+              "avoid-escape"
+          ]
+      },
+      "no-console": false,
+      "no-var-requires": false,
+      "member-access": false
+  },
+  "jsRules": {
+      "quotemark": {
+          "options": [
+              "single",
+              "avoid-escape"
+          ]
+      },
+      "no-console": false,
+      "no-var-requires": false
+  }
+}
