@@ -37,7 +37,7 @@ class App extends React.Component<any, IAppState> {
       <Container>
         <Header size='huge'>Conversation Board UI</Header>
         <Segment>
-          <p>Counter: {this.state.counter}</p>
+          <p>Counter: <span className='test-target'>{this.state.counter}</span></p>
           <Button primary onClick={this.increment}>Add</Button>
         </Segment>
       </Container>
