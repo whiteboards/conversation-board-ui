@@ -27,7 +27,7 @@
     "build": "webpack --progress --config webpack.config.js",
     "test": "jest --watch",
     "lint": "npm run stylelint && npm run tslint",
-    "tslint": "tslint src/**/*.ts -e && tslint src/**/*.tsx -e",
+    "tslint": "tslint src/**/*.ts && tslint src/**/*.tsx",
     "stylelint": "stylelint src/**/*.scss",
     "travis": "npm run stylelint && npm run tslint && npm run test && jest"
   },
