@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 
 import App from './App';
 
-// TODO: Import styles here
+import './scss/index.scss';
 
 // TODO: Implement hot module replacement
 

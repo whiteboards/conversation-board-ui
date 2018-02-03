@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -123,6 +124,12 @@ module.exports = {
       title: 'Conversation Board',
       template: 'src/index.ejs',
       chunksSortMode: 'dependency',
+    }),
+
+    // SCSS linting
+    new StyleLintPlugin({
+      syntax: 'scss',
+      failOnError: false,
     }),
   ],
 };
