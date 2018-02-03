@@ -4,7 +4,7 @@ import { Button, Container, Header, Segment } from 'semantic-ui-react';
 
 // interface IAppProps {
 //   // No props.
-//   // We need this as a placeholder for the component.
+//   // We need this as a placeholder for the component. (Actually, we don't with this tslint config)
 //   // (We could pass props to here from where we call ReactDOM.render in index.tsx)
 // }
 
