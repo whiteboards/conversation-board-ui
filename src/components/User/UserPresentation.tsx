@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { IUserContainerState } from '../interfaces';
+import { IUserContainerState } from '../../lib/interfaces';
 
 import { Loader, Message } from 'semantic-ui-react';
 

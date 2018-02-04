@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import * as React from 'react';
 
-import App from '../App';
+import App from '../components/App';
 
 describe('<App />', () => {
   it('should render without errors', () => {

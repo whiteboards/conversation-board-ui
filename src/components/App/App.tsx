@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Login from './Login';
-import Routes from './Routes';
+import Login from '../Login';
+import Routes from '../App/Routes'; // wtf? This wouldn't work for me using just ./Routes?
 
 // interface IAppProps {
 //   // No props.

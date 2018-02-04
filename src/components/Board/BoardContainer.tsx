@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 
-import * as API from '../api';
+import * as API from '../../lib/api';
 
-import { IBoardContainerState } from '../interfaces';
+import { IBoardContainerState } from '../../lib/interfaces';
 
 import BoardPresentation from './BoardPresentation';
 

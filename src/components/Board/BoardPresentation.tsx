@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { Loader, Message } from 'semantic-ui-react';
 
-import { IBoardContainerState } from '../interfaces';
+import { IBoardContainerState } from '../../lib/interfaces';
 
 const BoardPresentation: React.StatelessComponent<IBoardContainerState> = (props) => {
   if (props.board === undefined || props.posts.posts === undefined) {

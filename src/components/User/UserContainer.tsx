@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 
-import { IUserContainerState } from '../interfaces';
+import { IUserContainerState } from '../../lib/interfaces';
 
 import UserPresentation from './UserPresentation';
 
-import * as API from '../api';
+import * as API from '../../lib/api';
 
 // Containers hold state and return the top level presentational component.
 // From this point down, no component should hold data in state unless it's

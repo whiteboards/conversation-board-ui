@@ -3,10 +3,10 @@ import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Container, Header, Segment } from 'semantic-ui-react';
 
-import Navigation from './Navigation';
-import Home from './Home';
-import Board from './Board';
-import User from './User';
+import Navigation from '../Navigation';
+import Home from '../Home';
+import Board from '../Board';
+import User from '../User';
 
 const Routes: React.StatelessComponent<any> = (props) => {
   return (
