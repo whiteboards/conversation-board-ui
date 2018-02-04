@@ -11,6 +11,8 @@ export const getBoard = async (boardId: string) => {
     return response.data;
   } catch (err) {
     console.error('[API] getBoard failed', err);
+    // Temporary delay to demonstrate loaders
+    await sleep(Math.floor(Math.random() * 5000));
     return null;
   }
 };
@@ -21,6 +23,8 @@ export const getPosts = async (boardId: string, startingItem = 0, pageSize = 10,
     return response.data;
   } catch (err) {
     console.error('[API] getPosts failed', err);
+    // Temporary delay to demonstrate loaders
+    await sleep(Math.floor(Math.random() * 5000));
     return null;
   }
 };
@@ -31,6 +35,12 @@ export const getUser = async (userId: string) => {
     return response.data;
   } catch (err) {
     console.error('[API] getUser failed', err);
+    // Temporary delay to demonstrate loaders
+    await sleep(Math.floor(Math.random() * 5000));
     return null;
   }
 };
+
+function sleep(time: number) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
