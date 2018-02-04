@@ -25,12 +25,8 @@ class App extends React.Component<any, any> {
     return (
       <Router>
         <Switch>
-          <Route exact path='/login'>
-            <Login />
-          </Route>
-          <Route path='/'>
-            <Routes />
-          </Route>
+          <Route exact path='/login' component={Login} />
+          <Route path='/' component={Routes} />
         </Switch>
       </Router>
     );

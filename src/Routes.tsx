@@ -4,38 +4,21 @@ import { Switch, Route } from 'react-router-dom';
 import { Container, Header, Segment } from 'semantic-ui-react';
 
 import Navigation from './Navigation';
-
-// interface IRoutesProps {
-//   // no props
-// }
+import Home from './Home';
+import Board from './Board';
+import User from './User';
 
 const Routes: React.StatelessComponent<any> = (props) => {
   return (
     <div>
       <Navigation />
-      <Switch>
-        <Route exact path='/'>
-          <Container>
-            <Segment>
-              <Header>Home</Header>
-            </Segment>
-          </Container>
-        </Route>
-        <Route path='/board/:id'>
-          <Container>
-            <Segment>
-              <Header>Board</Header>
-            </Segment>
-          </Container>
-        </Route>
-        <Route path='/user'>
-          <Container>
-            <Segment>
-              <Header>User</Header>
-            </Segment>
-          </Container>
-        </Route>
-      </Switch>
+      <Container className='route-container'>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/board/:id' component={Board} />
+          <Route exact path='/user' component={User} />
+        </Switch>
+      </Container>
     </div>
   );
 };

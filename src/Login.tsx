@@ -2,12 +2,13 @@ import * as React from 'react';
 
 import { Link } from 'react-router-dom';
 import { Button, Container, Header, Segment, Form } from 'semantic-ui-react';
+import { RouteComponentProps } from 'react-router';
 
 // interface ILoginProps {
 //   // no props
 // }
 
-const Login: React.StatelessComponent<any> = (props) => {
+const Login: React.StatelessComponent<RouteComponentProps<any>> = (props) => {
   return (
     <Container>
       <Segment>
