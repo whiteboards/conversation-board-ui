@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { IBoard, ISearchResults, IUser, IPost } from './interfaces';
+import { IBoard, ISearchResults, IUser, IPost } from './shared';
 
 // TODO: Add to config
 const API_ROOT = 'http://localhost:3000/api';
