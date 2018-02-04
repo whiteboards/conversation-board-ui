@@ -28,6 +28,7 @@ Front end UI for Conversation Board
 * [Semantic UI](https://semantic-ui.com/)
 * [Semantic UI React](https://react.semantic-ui.com/)
 * [Sass](http://sass-lang.com/)
+* [Axios](https://github.com/axios/axios#axios)
 
 ## Tooling
 
