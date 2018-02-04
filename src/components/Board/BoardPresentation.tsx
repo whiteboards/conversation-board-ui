@@ -9,15 +9,19 @@ const BoardPresentation: React.StatelessComponent<IBoardContainerState> = (props
     return (
       <Message icon>
         <Icon name='circle notched' loading />
-        <Message.Header>Loading board...</Message.Header>
+        <Message.Content>
+          <Message.Header>Loading board...</Message.Header>
+        </Message.Content>
       </Message>
     );
   } else if (props.board === null || props.posts.posts === null) {
     return (
-      <Message icon error>
-        <Icon name='exclamation triangle' />
-        <Message.Header>Failed to load board</Message.Header>
-      </Message>
+      <Message
+        error
+        icon='exclamation triangle'
+        header='Failed to load board'
+        content='Please try again later'
+      />
     );
   } else {
     return (
