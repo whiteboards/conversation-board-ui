@@ -2,18 +2,21 @@ import * as React from 'react';
 
 import { IUserContainerState } from '../../lib/interfaces';
 
-import { Loader, Message } from 'semantic-ui-react';
+import { Message, Icon } from 'semantic-ui-react';
 
 const UserPresentation: React.StatelessComponent<IUserContainerState> = (props) => {
   if (props.user === undefined) {
     return (
-      <Loader active>Loading</Loader>
+      <Message icon>
+        <Icon name='circle notched' loading />
+        <Message.Header>Loading user...</Message.Header>
+      </Message>
     );
   } else if (props.user === null) {
     return (
-      <Message negative>
-        <Message.Header>Failed to retrieve data</Message.Header>
-        <p>Please try again in a few minutes.</p>
+      <Message error icon>
+        <Icon name='exclamation triangle' />
+        <Message.Header>Failed to load user</Message.Header>
       </Message>
     );
   } else {
