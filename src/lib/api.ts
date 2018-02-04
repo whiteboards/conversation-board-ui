@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { IBoard, IPostResults, IUser } from './interfaces';
+import { IBoard, ISearchResults, IUser, IPost } from './interfaces';
 
 // TODO: Add to config
 const API_ROOT = 'http://localhost:3000/api';
@@ -19,7 +19,7 @@ export const getBoard = async (boardId: string) => {
 
 export const getPosts = async (boardId: string, startingItem = 0, pageSize = 10, searchString = '') => {
   try {
-    const response = await axios.get<IPostResults>(`${API_ROOT}/board/${boardId}/posts`);
+    const response = await axios.get<ISearchResults<IPost>>(`${API_ROOT}/board/${boardId}/posts`);
     return response.data;
   } catch (err) {
     console.error('[API] getPosts failed', err);

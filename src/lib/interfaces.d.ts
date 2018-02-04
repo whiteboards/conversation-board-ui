@@ -12,14 +12,14 @@ export interface IBoard {
 }
 
 export interface IPostState {
-  posts: IPostResults;
+  posts: ISearchResults<IPost>;
   pageSize: number;
   startingItem: number;
   searchString: string;
 }
 
-export interface IPostResults {
-  items: IPost[];
+export interface ISearchResults<T> {
+  items: T[];
   total: number;
 }
 
