@@ -1,3 +1,16 @@
+// This file is imported at the top of our application.
+
+// I think this one file will be sufficient to handle the styling tweaks we need. If
+// we ever need more, we need to @import those files here rather than importing
+// straight into the ts files.
+
+// The way webpack pulls in imported scss files is done in such a way that the styles
+// get pulled in as global styles. It isn't smart enough to quarantine them to the
+// component where they were imported. This is why we need to @import here, so we can
+// handle style nesting correctly.
+
 #ConversationBoard {
-  // No styles yet
+  .route-container {
+    padding-top: 1rem;
+  }
 }

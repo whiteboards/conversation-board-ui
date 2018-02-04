@@ -1,4 +1,8 @@
 # conversation-board-ui
+
+[![master](https://travis-ci.org/whiteboards/conversation-board-ui.svg?branch=master)](https://travis-ci.org/whiteboards/conversation-board-ui)
+[![develop](https://travis-ci.org/whiteboards/conversation-board-ui.svg?branch=develop)](https://travis-ci.org/whiteboards/conversation-board-ui)
+
 Front end UI for Conversation Board
 
 ## Getting Started
@@ -24,6 +28,7 @@ Front end UI for Conversation Board
 * [Semantic UI](https://semantic-ui.com/)
 * [Semantic UI React](https://react.semantic-ui.com/)
 * [Sass](http://sass-lang.com/)
+* [Axios](https://github.com/axios/axios#axios)
 
 ## Tooling
 
