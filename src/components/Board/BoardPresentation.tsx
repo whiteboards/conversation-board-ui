@@ -1,6 +1,7 @@
 import * as React from 'react';
+import * as moment from 'moment';
 
-import { Message, Icon } from 'semantic-ui-react';
+import { Message, Icon, Header, Card } from 'semantic-ui-react';
 
 import { IBoardContainerState } from '../../lib/interfaces';
 
@@ -26,7 +27,20 @@ const BoardPresentation: React.StatelessComponent<IBoardContainerState> = (props
   } else {
     return (
       <div>
-        <div>Board {props.board.id}</div>
+        <Header>{props.board.name}</Header>
+        <Card.Group>
+          {
+            props.posts.posts.items.map((post) => (
+              <Card>
+                <Card.Content>
+                  <Card.Header>{post.title}</Card.Header>
+                  <Card.Meta>{moment.utc(post.date_created).format('LL')}</Card.Meta>
+                  <Card.Description>{post.content}</Card.Description>
+                </Card.Content>
+              </Card>
+            ))
+          }
+        </Card.Group>
       </div>
     );
   }

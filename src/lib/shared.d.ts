@@ -19,6 +19,12 @@ export interface IPost {
   date_updated: string;
 }
 
+export interface IChat {
+  id: string;
+  users: string[],
+  messageTotal: number,
+}
+
 export interface IUser {
   id: string;
   username: string;

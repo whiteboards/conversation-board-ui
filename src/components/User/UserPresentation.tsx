@@ -1,8 +1,9 @@
 import * as React from 'react';
+import * as moment from 'moment';
 
 import { IUserContainerState } from '../../lib/interfaces';
 
-import { Message, Icon, List } from 'semantic-ui-react';
+import { Message, Icon, List, Header } from 'semantic-ui-react';
 
 const UserPresentation: React.StatelessComponent<IUserContainerState> = (props) => {
   if (props.user === undefined) {
@@ -26,8 +27,11 @@ const UserPresentation: React.StatelessComponent<IUserContainerState> = (props) 
   } else {
     return (
       <div>
+        <Header>User Details</Header>
         <List>
-
+          <List.Item icon='user' content={props.user.displayname} />
+          <List.Item icon='mail' content={props.user.email} />
+          <List.Item icon='calendar' content={moment.utc(props.user.date_created).format('LL')} />
         </List>
       </div>
     );
