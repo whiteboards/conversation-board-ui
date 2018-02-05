@@ -10,7 +10,7 @@ import User from '../User';
 
 const Routes: React.StatelessComponent<any> = (props) => {
   return (
-    <div>
+    <React.Fragment>
       <Navigation />
       <Container className='route-container'>
         <Switch>
@@ -19,7 +19,7 @@ const Routes: React.StatelessComponent<any> = (props) => {
           <Route exact path='/user' component={User} />
         </Switch>
       </Container>
-    </div>
+    </React.Fragment>
   );
 };
 
