@@ -26,7 +26,7 @@ const BoardPresentation: React.StatelessComponent<IBoardContainerState> = (props
     );
   } else {
     return (
-      <div>
+      <React.Fragment>
         <Header>{props.board.name}</Header>
         <Card.Group>
           {
@@ -41,7 +41,7 @@ const BoardPresentation: React.StatelessComponent<IBoardContainerState> = (props
             ))
           }
         </Card.Group>
-      </div>
+      </React.Fragment>
     );
   }
 };

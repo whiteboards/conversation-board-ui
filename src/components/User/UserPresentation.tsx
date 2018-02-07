@@ -26,14 +26,14 @@ const UserPresentation: React.StatelessComponent<IUserContainerState> = (props) 
     );
   } else {
     return (
-      <div>
+      <React.Fragment>
         <Header>User Details</Header>
         <List>
           <List.Item icon='user' content={props.user.displayname} />
           <List.Item icon='mail' content={props.user.email} />
           <List.Item icon='calendar' content={moment.utc(props.user.date_created).format('LL')} />
         </List>
-      </div>
+      </React.Fragment>
     );
   }
 };
