@@ -31,7 +31,7 @@ const BoardPresentation: React.StatelessComponent<IBoardContainerState> = (props
         <Card.Group>
           {
             props.posts.posts.items.map((post) => (
-              <Card>
+              <Card key={post.id}>
                 <Card.Content>
                   <Card.Header>{post.title}</Card.Header>
                   <Card.Meta>{moment.utc(post.date_created).format('LL')}</Card.Meta>
